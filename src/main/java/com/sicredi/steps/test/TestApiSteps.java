@@ -1,4 +1,4 @@
-package com.sicredi.test;
+package com.sicredi.steps.test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
