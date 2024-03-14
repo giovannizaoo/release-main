@@ -20,6 +20,8 @@ public class ProductsId {
 
         Assert.assertEquals("validar status code", 200, validarResponse.getStatusCode());
 
+        System.out.println("Validar campo com Json " + validarResponse.asPrettyString());
+
     }
 
     @org.junit.Test
@@ -33,6 +35,8 @@ public class ProductsId {
                 .get("/products/0");
 
         Assert.assertEquals("validar status code", 404, validarResponse.getStatusCode());
+
+        System.out.println("Validar campo com Json " + validarResponse.asPrettyString());
 
     }
 }
