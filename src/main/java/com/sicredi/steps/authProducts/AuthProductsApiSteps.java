@@ -20,11 +20,12 @@ public class AuthProductsApiSteps {
         validarResponse = RestAssured
                 .given()
                 .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + tokenValido)
+                .header("Authorization", "Bearer " + token)
                 .get("/auth/products");
 
         Assert.assertEquals("validar status code", 200, validarResponse.getStatusCode());
 
+        System.out.println("Validar campo com Json " + validarResponse.asPrettyString());
 
     }
 
@@ -39,13 +40,15 @@ public class AuthProductsApiSteps {
         validarResponse = RestAssured
                 .given()
                 .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " )
+                .header("Authorization", "Bearer ")
                 .get("/auth/products");
 
         Assert.assertEquals("validar status code", 401, validarResponse.getStatusCode());
 
+        System.out.println("Validar campo com Json " + validarResponse.asPrettyString());
 
     }
+
     @org.junit.Test
     public void authProductsAuthProblem() {
 
@@ -61,6 +64,7 @@ public class AuthProductsApiSteps {
 
         Assert.assertEquals("validar status code", 403, validarResponse.getStatusCode());
 
+        System.out.println("Validar campo com Json " + validarResponse.asPrettyString());
 
     }
 
