@@ -33,5 +33,7 @@ public class ProductsAddApiSteps {
 
         System.out.print("Validar Status Code " + ProductsAddResponseModel.class);
 
+        System.out.println("Validar campo com Json " + productsAddResponseModel);
+
     }
 }
