@@ -27,5 +27,7 @@ public class AuthLoginApiSteps {
                 .body()
                 .as(AuthLoginResponseModel.class);
 
+        System.out.println("Validar campo com Json " + authLoginResponseModel);
+
     }
 }
