@@ -20,5 +20,7 @@ public class UsersApiSteps {
 
         Assert.assertEquals("validar status code", 200, validarResponse.getStatusCode());
 
+        System.out.println("Validar campo com Json " + validarResponse.asPrettyString());
+
     }
 }
